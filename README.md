@@ -1,42 +1,39 @@
-# xhs-style-imitation
+# 小红书风格模仿
 
-小红书风格模仿写作：用户给博主/笔记链接/截图，自动拉取原笔记分析**风格指纹**，按指纹写新文章。
+![GitHub stars](https://img.shields.io/github/stars/ninggui/xhs-style-imitation)
+![License](https://img.shields.io/github/license/ninggui/xhs-style-imitation)
+[![SkillHub](https://img.shields.io/badge/SkillHub-在线安装-blue)](https://skillhub.cn/skills/xhs-style-imitation)
+
+用户给博主/笔记链接/截图，拉取原笔记分析风格指纹，按指纹写新文章。
 
 ## 这是什么
 
-一个可复用的 AI Agent 技能（Skill），来自真实业务场景沉淀。用于需要"模仿某个小红书博主的表达风格"写新内容——不是简单套模板，而是先深度分析原作者的风格指纹（句式/节奏/emoji用法/结构），再按指纹创作。
+一个可复用的 AI Agent 技能（Skill），来自真实业务场景沉淀，含完整执行流程、避坑清单与验证步骤。
 
-## 解决的问题
+## 快速使用
 
-- 想模仿某个博主风格，但说不清"风格"到底是什么
-- 直接让 AI 写，产出"像 AI 不像博主"
-- 找不到系统化的风格分析方法
+将本仓库放入 Agent 技能目录后，用对应触发词调用（见 SKILL.md），Agent 会自动加载并执行完整流程。
 
-## 核心方法论
+## 核心能力
 
-1. **先分析后写作**——拿到博主/笔记链接，先拉取原笔记分析风格指纹
-2. **指纹维度**：
-   - 句式特征（短句/长句/排比/口语化程度）
-   - 结构模式（开头钩子/正文节奏/结尾CTA）
-   - 表达习惯（emoji用法/标点/分段）
-   - 内容选题（话题领域/价值主张）
-3. **按指纹创作**——新文章严格匹配指纹，而不是泛泛模仿
+| 能力 | 说明 |
+|------|------|
+| 原笔记拉取与解析 |
+| 风格指纹提取（句式/语气/结构） |
+| 按指纹生成新文 |
 
-## 使用方式
+## 使用方式（安装）
 
-将本仓库内容放入你的 Agent 技能目录：
+- **Hermes**: 放入 `skills/` 目录
+- **Claude**: 放入 `~/.claude/skills/`
+- **其他 Agent**: 按对应 SKILL.md 格式放入技能目录
+- **SkillHub 一键安装**: https://skillhub.cn/skills/xhs-style-imitation
 
-- **Hermes**: `skills/` 目录
-- **Claude**: `~/.claude/skills/`
-- **其他 Agent**: 按对应 SKILL.md 格式
+## 优势
 
-Agent 会在匹配触发条件时自动加载并使用。
-
-## 典型场景
-
-- 用户发来一个小红书博主主页链接 → 分析风格 → 写新文章
-- 用户发来一篇笔记截图 → 分析 → 仿写同类主题
-- 用户描述想要"XX风格" → 拉取参考 → 生成
+- 风格可复现不靠感觉
+- 适配账号人设
+- 内容合规内置
 
 ## 内容结构
 
