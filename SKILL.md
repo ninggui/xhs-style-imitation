@@ -40,8 +40,8 @@ https://www.xiaohongshu.com/explore/{note_id}?xsec_token={token}&xsec_source=pc_
 cat > /path/to/data/xhs_style_payload.json << 'EOF'
 {"jsonrpc":"2.0","method":"tools/call","params":{"name":"get_feed_detail","arguments":{"feed_id":"{note_id}","xsec_token":"{token}"}},"id":1}
 EOF
-docker cp /path/to/data/xhs_style_payload.json xiaohongshu-mcp:/tmp/payload.json
-docker exec xiaohongshu-mcp sh -c "curl -s 'http://127.0.0.1:18060/mcp' -H 'Content-Type: application/json' -d @/tmp/payload.json --max-time 90"
+docker cp /path/to/data/xhs_style_payload.json xhs-mcp:/tmp/payload.json
+docker exec xhs-mcp sh -c "curl -s 'http://127.0.0.1:<port>/mcp' -H 'Content-Type: application/json' -d @/tmp/payload.json --max-time 90"
 ```
 
 - 正文在 `result.content[0].text` → 内层 JSON → `data.note.title` / `data.note.desc`
