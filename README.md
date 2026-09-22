@@ -1,5 +1,8 @@
 <div align="center">
 
+
+![cover](assets/cover.png)
+
 # xhs-style-imitation
 
 **给我一个小红书博主，我把他的"风格指纹"提取出来，让 AI 按这个指纹写新笔记。**
